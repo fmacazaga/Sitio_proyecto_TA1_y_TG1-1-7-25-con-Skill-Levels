@@ -1,4 +1,3 @@
-
 /* Ajustes generales: */
 
 * {
@@ -45,7 +44,6 @@ nav ul li a {
 
 nav ul li a:hover { color: #e95779; }
 
-main {display: grid; gap: 24px;}
 
 
 /*   *****  S E C C I O N   H E R O  *****   */
@@ -92,9 +90,9 @@ main {display: grid; gap: 24px;}
 
 /*   *****  S E C C I O N   S K I L L S  *****   */
 
-#skills { display: grid; gap: 20px; text-align: center; }
+#skills { display: grid; gap: 20px; text-align: center; margin-top: 38px;}
 
-#skills h2 { font-size: 32px; }
+#skills h2 { font-size: 36px; }
 
 .skill { display: grid; gap: 4px; text-align: left; }
 
