@@ -1,0 +1,138 @@
+
+/* Ajustes generales: */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html { height: 100%; }
+
+body {
+    height: 100%;
+    display: grid; 
+    grid-template-rows: 92px 1fr 92px;
+    font-family: Roboto;
+}
+
+.container { width: min(100%, 1100px); margin: auto; padding: 0 20px;}
+
+/* Sección Header */
+
+header { position: sticky; top: 0; background: #fff; z-index: 9; }
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+nav ul { display: flex; }
+
+nav ul li { list-style: none; padding-left: 20px; }
+
+nav ul li a {
+    text-decoration: none;
+    transition: .3s;
+    opacity: .7;
+    color: #030303;
+    font-weight: 500;
+    font-size: 14px;
+
+}
+
+nav ul li a:hover { color: #e95779; }
+
+
+
+/*   *****  S E C C I O N   H E R O  *****   */
+
+#hero { position: relative; }
+
+#hero div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(113, 16, 211, .5);
+    display: grid;
+    place-items: center;
+    font-size: max(34px,3vw);
+    color: #fff;
+    font-weight: 600;
+}
+
+/* max sirve para establecer un ancho mínimo de 800px */
+#hero img, #hero video { width: max(800px, 100%); display: block; }
+
+
+/*   *****  S E C C I O N   T R E S   C O L U M N A S  *****   */
+
+.col3 {
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.col3 svg { width: 42px; fill: #2e2e2e;}
+
+.col3 article {
+    display: grid; 
+    gap: 16px; 
+    justify-items: center;
+    text-align: center; 
+    padding: 20px 0;
+    hyphens: auto;
+    color: #2e2e2e;
+}
+
+/*   *****  S E C C I O N   S K I L L S  *****   */
+
+#skills { display: grid; gap: 20px; text-align: center; margin-top: 38px;}
+
+#skills h2 { font-size: 36px; }
+
+.skill { display: grid; gap: 4px; text-align: left; }
+
+.skill div { position: relative; background: #d7d7d7; width: 100%; height: 16px; border-radius: 50px; }
+
+.skill div div {position: absolute; background: #e95779; border-radius: 50px; color: #fff; left: 0; top: 0; font-size: 10px; padding: 2px 6px;}
+
+
+/*   *****  S E C C I O N   F O O T E R  *****   */
+
+footer { display: grid; place-items: center; background: #e3e3e3; margin-top: 20px;}
+
+
+
+/*   *****  B O T O N E S  *****   */
+
+.btn {
+    height: 40px;
+    padding: 0 20px;
+    background: #e95779;
+    color: #fff;
+    border-radius: 50px;
+    text-decoration: none;
+    display: grid;
+    place-items: center;
+    font-size: 14px; 
+    font-weight: 500;
+    letter-spacing: .1px;
+}
+.btn:hover { background: #98384f; }
+
+
+
+/* A partir de acá empiezan las media queries, estos estilos solo se aplican si la ventana tiene menos de 900 px de ancho */
+
+@media (max-width: 900px) {
+
+    body { grid-template-rows: 56px 1fr 82px; }
+
+    .col3 { grid-template-columns: 1fr; }
+
+}
